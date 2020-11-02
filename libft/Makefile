@@ -14,7 +14,7 @@ ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c  \
 ft_split.c ft_itoa.c ft_strmapi.c ft_putchar_fd.c \
 ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 ft_putstr_n.c ft_uitoa.c ft_itoa_base.c ft_lltoa_base.c \
-use_in_set.c ft_strndup.c
+use_in_set.c ft_strndup.c ft_putstr.c ft_strncpy.c
 
 .O		= ft_putchar.o ft_strlen.o ft_atoi.o ft_bzero.o \
 ft_memset.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
@@ -26,7 +26,7 @@ ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o \
 ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o \
 ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o \
 ft_putstr_n.o ft_uitoa.o ft_itoa_base.o ft_lltoa_base.o \
-use_in_set.o ft_strndup.o
+use_in_set.o ft_strndup.o ft_putstr.o ft_strncpy.o
 
 DIRECTORY	= includes
 

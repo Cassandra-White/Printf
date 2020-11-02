@@ -12,7 +12,8 @@ SRCS		= ./ft_printf.c \
 			./ft_print_hexa.c \
 			./ft_print_pointer.c \
 			./ft_print_percent.c \
-			./struct_complet.c 
+			./struct_complet.c \
+		        ./struct_space.c	
 	
 
 OBJS		= $(SRCS:.c=.o)

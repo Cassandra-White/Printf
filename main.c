@@ -83,10 +83,12 @@ int		main(void)
 	printf("v = %d\n", v);	
 
 	//ft_printf(" je suis un test %s, %c, %d\n",'P', "caca", 123);
-
-	ft_printf(" je suis un test [%9d]\n", 789);
-	ft_printf(" je suis un test [%*d]\n", 9, 12);
+	printf("____________________________________________________\n");
+	ft_printf(" je suis un test [%*s]\n",11,"123456789");
+//	printf(" je suis un test [%*c]\n", -9, 'r');
+	printf(" \n     %.9d   \n", 789);
 
 	return(0);
 }
+
 

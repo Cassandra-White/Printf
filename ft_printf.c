@@ -15,10 +15,18 @@ static void	info_init(t_info *info)
 
 static int	ft_print_match(char *src, va_list arg, t_info *info)
 {
+
+	ft_putchar(*src);
+	//	printf("*SRC = [%c]", *src);
 	if (*src == 'c')
 		return (ft_print_char(arg, info));
+
 	if (*src == 's')
+	{
+		ft_putchar(*src);
+//		printf("LOLO"); 
 		return (ft_print_string(arg, info));
+	}
 	if (*src == 'd' || *src == 'i')
 		return (ft_print_int(arg, info));
 	if (*src == 'u')
@@ -59,6 +67,7 @@ static int		ft_pro_format(char *src, va_list arg)
 			info_init(&info);
 			if(struct_complet(&src, arg, &info) == ERROR)
 				return (ERROR);
+	//		printf("STRING");
 			if ((ft_print_match(src, arg, &info) == ERROR))
 				return (ERROR);
 			src++;

@@ -18,7 +18,7 @@
 # include <stddef.h>
 
 int					ft_putchar(char c);
-size_t				ft_strlen(const char *str);
+int				ft_strlen(const char *str);
 int					ft_atoi(const char *str);
 void				*ft_memset(void *str, int c, size_t n);
 void				ft_bzero(void *str, size_t n);
@@ -42,7 +42,7 @@ size_t				ft_strlcat(char *dst, const char *src, size_t size);
 char				*ft_strnstr(const char *dest, const char *src, size_t len);
 void				*ft_calloc(size_t nmemb, size_t size);
 char				*ft_strdup(const char *source);
-char				*ft_substr(char const *s, unsigned int start, size_t len);
+char				*ft_substr(char const *s, int start, int len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);
 char				**ft_split(char const *s, char c);
@@ -60,5 +60,7 @@ char				*ft_itoa_base(unsigned int n, const char *base);
 char				*ft_lltoa_base(long long n, const char *base);
 int				use_in_set(char c, char *set);
 char				*ft_strndup(const char *source, int size);
+int				ft_putstr(char *str);
+char				*ft_strncpy(char *dest, char *src, unsigned int n);
 
 #endif
