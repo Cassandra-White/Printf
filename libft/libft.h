@@ -62,5 +62,5 @@ int				use_in_set(char c, char *set);
 char				*ft_strndup(const char *source, int size);
 int				ft_putstr(char *str);
 char				*ft_strncpy(char *dest, char *src, unsigned int n);
-
+char 				*ft_strcpy(char *dest, char *src);
 #endif

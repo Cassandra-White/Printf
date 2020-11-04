@@ -3,7 +3,7 @@
 
 int		main(void)
 {
-	char *test = "je suis un test";
+	/*char *test = "je suis un test";
 	int i = 0;
 	int j = 0;
 	int k = 0;
@@ -26,7 +26,7 @@ int		main(void)
 
 
 
-	/*__________________________________________________________*/
+//	*__________________________________________________________*
 
 
 	i = ft_printf("Test CHAR [%c]\n", '%');
@@ -81,14 +81,39 @@ int		main(void)
 
 	printf("u = %d\n", u);
 	printf("v = %d\n", v);	
-
+*/
 	//ft_printf(" je suis un test %s, %c, %d\n",'P', "caca", 123);
-	printf("____________________________________________________\n");
-	ft_printf(" je suis un test [%*s]\n",11,"123456789");
-//	printf(" je suis un test [%*c]\n", -9, 'r');
-	printf(" \n     %.9d   \n", 789);
+//	printf("____________________________________________________\n");
+	ft_printf(" je suis un test [%11d]\n",-123456789);
+/*	printf(" je suis un test [%11d]\n",-123456789);
+	
+	ft_printf(" je suis un test [%-11d]\n",-123456789);
+	printf(" je suis un test [%-11d]\n",-123456789);
+*/
+	ft_printf(" je suis un test [%*d]\n",5,123456789);
+/*	printf(" je suis un test [%*d]\n",5,-123456789);
 
+	ft_printf(" je suis un test [%-*d]\n",5,-123456789);
+	printf(" je suis un test [%-*d]\n",5,-123456789);
+
+	ft_printf(" je suis un test [%.11d]\n",-123456789);
+	printf(" je suis un test [%.11d]\n",-123456789);
+
+
+	ft_printf(" je suis un test [%-.11d]\n",-123456789);
+	printf(" je suis un test [%-.11d]\n",-123456789);
+
+	ft_printf(" je suis un test [%.*d]\n",11,-123456789);
+	printf(" je suis un test [%.*d]\n",11,-123456789);
+
+	ft_printf(" je suis un test [%-.*d]\n",11,-123456789);
+	printf(" je suis un test [%-.*d]\n",11,-123456789);
+	
+
+
+//	printf(" je suis un test [%*c]\n", -9, 'r');
+//	printf(" \n     %.9d   \n", 789);
+*/
 	return(0);
 }
-
 

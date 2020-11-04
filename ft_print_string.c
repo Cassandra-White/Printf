@@ -4,11 +4,11 @@
 
 static char	*add_preci(t_info *info, char *space_preci, char *str)
 {
-	ft_putstr("KOKO");
+//	ft_putstr("KOKO");
 	if (info->preci == DISABLE 
 	|| (info->preci != 0 && info->preci >= ft_strlen(str)))
 		return (str);
-	ft_putstr("TOTO");
+//	ft_putstr("TOTO");
 	if(!(space_preci = malloc(sizeof(char ) * (info->preci + 1))))
 		return (ZERO);
 	ft_strncpy(space_preci, str, info->preci);
@@ -19,16 +19,16 @@ static char	*add_preci(t_info *info, char *space_preci, char *str)
 static char *add_width(t_info *info, char *space_width, char *str)
 {
 	int i;
-	ft_putstr("KIKI");
+//	ft_putstr("KIKI");
 	i = ft_strlen(str);
-	printf("I = [%d]", i);
-	ft_putstr("PRESQUE");
+//	printf("I = [%d]", i);
+//	ft_putstr("PRESQUE");
 	if (info->width <= i)
 		return (str);
-	ft_putstr("yoyo");
+//	ft_putstr("yoyo");
 	if((space_width = add_space(info->width, info->padding)) == 0)
 		return (ZERO);
-	ft_putstr("je t'enc");
+//	ft_putstr("je t'enc");
 	if(info->right_space == ENABLE)
 		ft_strncpy(space_width, str, i);
 	else
@@ -43,34 +43,40 @@ static char *add_width(t_info *info, char *space_width, char *str)
 int		ft_print_string(va_list arg, t_info *info)
 {
 //	printf("MOMO");
-	ft_putstr("FUCK");
+//	ft_putstr("FUCK");
 	t_space *space;
-//	int	flag;
+	int	flag;
 	char *str;
-//	flag = DISABLE;
+//	str = 0;
+//	printf("STR 1 = [%s]", str);
+	flag = DISABLE;
 //	printf("PIPI");
-	if(!(str = va_arg(arg, char *)))
+	str = va_arg(arg, char *);
+
+	if (str == NULL)
 	{
-//		printf("str [%s]", str);
+//		printf("IF str [%s]", str);
 			str = ft_strndup("(null)", 6);
-//			flag = ENABLE;
+			flag = ENABLE;
 	}
-	ft_putstr("zizi");
+
+//	printf("NORMAL str [%s]", str);
+//	ft_putstr("zizi");
 	space = start_space();
-	ft_putstr("CACA");
+//	ft_putstr("CACA");
 //	printf ("POPO");
 	if ((str = add_preci(info, space->preci, str)) == 0 
 	||(str = add_width(info, space->width, str))== 0)
 	{
-		ft_putstr("juju");
+//		ft_putstr("juju");
 		free_space(space);
 		return(ERROR);
 	}
-	ft_putstr("NUL");
+//	ft_putstr("NUL");
 	info->nbyte += ft_putstr_n(str, ft_strlen(str));
 	free_space(space);
-//	if (flag == ENABLE)
-	//	free(str);
+	if (flag == ENABLE)
+	free(str);
 
 	return (0);
 }

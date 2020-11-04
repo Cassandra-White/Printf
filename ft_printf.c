@@ -16,7 +16,7 @@ static void	info_init(t_info *info)
 static int	ft_print_match(char *src, va_list arg, t_info *info)
 {
 
-	ft_putchar(*src);
+//	ft_putchar(*src);
 	//	printf("*SRC = [%c]", *src);
 	if (*src == 'c')
 		return (ft_print_char(arg, info));
@@ -25,6 +25,8 @@ static int	ft_print_match(char *src, va_list arg, t_info *info)
 	{
 		ft_putchar(*src);
 //		printf("LOLO"); 
+	//	char *str;
+	//	str = va_arg(arg, char *);
 		return (ft_print_string(arg, info));
 	}
 	if (*src == 'd' || *src == 'i')

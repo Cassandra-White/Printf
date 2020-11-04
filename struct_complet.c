@@ -17,12 +17,14 @@ static void complet_width(char **src, va_list arg, t_info *info)
 //	printf("**SRC = %c", **src);
 	if(!(**src == '*' || use_in_set(**src, DIGIT)))
 		return;
-	if((**src)== '*')
+	printf("SRC WIDTH STRUC = [%s]\n", *src);
+	if(**src == '*')
 	{
 		info->width = va_arg(arg, int);
-//		printf("IF :INFO -> Width = [%d]\n", info->width);
+		printf("IF :INFO -> Width = [%d]\n", info->width);
 //		printf("SRC = [%s]", *src);
 		(*src)++;
+		printf("*SRC++ = [%s]\n", *src);
 	}
 	else
 	{
@@ -50,6 +52,7 @@ static void complet_preci(char **src, va_list arg, t_info *info)
 //	printf("**SRC = [%c]\n", **src);
 	if(!(**src == '.'))
 		return;
+	printf("COMPLET PRECI");
 	(*src)++;
 	if((**src)== '*')
 	{

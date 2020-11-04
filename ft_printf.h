@@ -50,6 +50,9 @@ int		struct_complet(char **src,va_list arg, t_info *info);
 t_space		*start_space(void);
 char 		*add_space(int info_width, char info_padding);
 void		free_space(t_space *space);
+char		*start_sign(t_info *info, char *str);
+char		*add_sign(t_info *info, char *str, int i);
+
 
 
 #endif
