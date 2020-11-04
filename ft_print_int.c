@@ -11,8 +11,10 @@ static char *add_preci(t_info *info, char *space_preci, char *str)
 		str = "";
 	if(info->preci <= i)
 		return (str);
-	if(!((space_preci = add_space(info->preci, '0')) == 0))
+	if(!(space_preci = add_space(info->preci, '0')))
+	{
 		return (0);
+	}
 	ft_strcpy(&space_preci[info->preci - i], str);
 	return (space_preci);
 }

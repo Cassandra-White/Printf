@@ -14,7 +14,9 @@ char *add_space(int info_width, char info_padding)
 {
 	char *space;
 	if(!(space = malloc(sizeof(char) * (info_width + 1))))
+	{
 		return (0);
+	}
 	ft_memset(space, info_padding, info_width);
 	space[info_width] = '\0';
 	return (space);	
