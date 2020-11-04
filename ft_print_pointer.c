@@ -20,7 +20,6 @@ static char *add_preci(t_info *info, char *space_preci, char *str)
 static char *add_width(t_info *info, char *space_width, char *str)
 {
 	int i;
-
 	i = ft_strlen(str);
 	if (info->width <= i)
 		return (str);
@@ -42,7 +41,6 @@ int		ft_print_pointer(va_list arg, t_info *info)
 	space = start_space();
 	if(!(str = ft_lltoa_base(va_arg(arg, long long), HEX_LOW)))
 		return (ERROR);
-	
 	if(!(str = add_preci(info, space->preci, str))
 	|| !(str = add_width(info, space->width, str)))
 	{

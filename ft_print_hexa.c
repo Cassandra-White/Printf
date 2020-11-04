@@ -48,6 +48,7 @@ int		ft_print_hexa(va_list arg, t_info *info, char *base )
 	space = start_space();
 	if(!(str = ft_itoa_base((int)va_arg(arg, int), base)))
 		return (ERROR);
+	
 	if(!(str = add_preci(info, space->preci, str))
 	|| !(str = add_width(info, space->width, str)))
 	{

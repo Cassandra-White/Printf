@@ -84,8 +84,17 @@ int		main(void)
 */
 	//ft_printf(" je suis un test %s, %c, %d\n",'P', "caca", 123);
 //	printf("____________________________________________________\n");
-	ft_printf("[%.50p]\n");
-	printf("[%.25p]\n");
+	ft_printf("%5%\n");
+	ft_printf("%-5%\n");
+	ft_printf("%05%\n");
+	ft_printf("%-05%\n");
+	ft_printf("%% *.5i 42 == |% *.5i|", 4,42);
+	ft_printf("%.*o",-3, 12345);
+	ft_printf("%.*o",-1, 12345);
+	ft_printf("%.*o",-1, 0);
+
+
+	printf("%5%\n");
 /*	printf(" je suis un test [%11d]\n",-123456789);
 	
 	ft_printf(" je suis un test [%-11d]\n",-123456789);

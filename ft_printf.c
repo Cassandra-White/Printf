@@ -18,7 +18,6 @@ static int	ft_print_match(char *src, va_list arg, t_info *info)
 
 	if (*src == 'c')
 		return (ft_print_char(arg, info));
-
 	if (*src == 's')
 		return (ft_print_string(arg, info));
 	if (*src == 'd' || *src == 'i')
