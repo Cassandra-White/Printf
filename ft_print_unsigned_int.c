@@ -52,17 +52,15 @@ int		ft_print_unsigned_int(va_list arg, t_info *info)
 	t_space *space;
 	char *str;
 	space = start_space();
-	if(!(str = ft_itoa((int)va_arg(arg, int))))
+	if(!(str = ft_uitoa((unsigned int)va_arg(arg, int))))
 		return (ERROR);
 	str = start_sign(info, str);
-
 	if(!(str = add_preci(info, space->preci, str))
 	|| !(str = add_width(info, space->width, str)))
 	{
 		free_space(space);
 		return(ERROR);
 	}
-
 	info->nbyte += ft_putstr_n(str , ft_strlen(str));
 	free_space(space);
 	return(0);
