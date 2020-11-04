@@ -48,8 +48,6 @@ int		ft_print_hexa(va_list arg, t_info *info, char *base )
 	space = start_space();
 	if(!(str = ft_itoa_base((int)va_arg(arg, int), base)))
 		return (ERROR);
-	str = start_sign(info, str);
-	
 	if(!(str = add_preci(info, space->preci, str))
 	|| !(str = add_width(info, space->width, str)))
 	{
@@ -62,20 +60,3 @@ int		ft_print_hexa(va_list arg, t_info *info, char *base )
 	return(0);
 }
 
-
-
-/*
-
-int	ft_print_hexa(va_list ap, t_info *info, char *base)
-{
-	char	*str;
-
-	str = ft_itoa_base((int)va_arg(ap, int), base);
-	if (str == NULL)
-		return (ERROR);	
-
-	info->nbyte += ft_putstr_n(str, ft_strlen(str));
-
-	return (0);
-
-}*/
