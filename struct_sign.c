@@ -4,7 +4,6 @@ char	*start_sign(t_info *info, char *str)
 {
 	if(str[0] == '-')
 	{
-		printf ("POPO");
 		info->sign = '-';
 		str++;
 	}

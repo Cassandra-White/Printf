@@ -2,7 +2,6 @@
 
 static char *add_width(t_info *info, char *space_width)
 {
-	printf("[%d]",info->width);
 	info->width--;
 	if (info->width < 1)
 		return ("");

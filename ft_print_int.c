@@ -11,7 +11,7 @@ static char *add_preci(t_info *info, char *space_preci, char *str)
 		str = "";
 	if(info->preci <= i)
 		return (str);
-	if(!(space_preci = add_space(info->preci, '0')) == 0)
+	if(!((space_preci = add_space(info->preci, '0')) == 0))
 		return (0);
 	ft_strcpy(&space_preci[info->preci - i], str);
 	return (space_preci);
@@ -48,13 +48,10 @@ int		ft_print_int(va_list arg, t_info *info)
 {
 	t_space *space;
 	char *str;
-//	printf("\nVa_ARG [%d]\n", (int)va_arg(arg, int));
 	space = start_space();
 	if(!(str = ft_itoa((int)va_arg(arg, int))))
 		return (ERROR);
-	printf("STR = [%s]\n", str);
 	str = start_sign(info, str);
-	printf("STR = [%s]\n", str);
 
 	if(!(str = add_preci(info, space->preci, str))
 	|| !(str = add_width(info, space->width, str)))
