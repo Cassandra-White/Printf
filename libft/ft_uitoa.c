@@ -1,3 +1,4 @@
+
 #include "libft.h"
 
 char	*ft_uitoa(unsigned int n)
@@ -16,7 +17,7 @@ char	*ft_uitoa(unsigned int n)
 	if(!(str = malloc(sizeof(char) * (i + 1))))
 		return (0);
 	str[i] = '\0';
-	str[0] = 0;
+	str[0] = '0';
 	while (n != 0)
 	{
 		i--;

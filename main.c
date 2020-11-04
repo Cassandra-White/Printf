@@ -84,7 +84,7 @@ int		main(void)
 */
 	//ft_printf(" je suis un test %s, %c, %d\n",'P', "caca", 123);
 //	printf("____________________________________________________\n");
-	ft_printf(" je suis un test [%u]\n",4294967295u);
+	ft_printf(" je suis un test [%u]\n",0);
 
 /*	printf(" je suis un test [%11d]\n",-123456789);
 	
