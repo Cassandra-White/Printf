@@ -13,4 +13,3 @@ char	*ft_strndup(const char *source, int size)
 	cpy[i] = '\0';
 	return (cpy);
 }
-

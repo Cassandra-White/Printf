@@ -1,7 +1,5 @@
 #include "libft.h"
 
-
-
 char	*ft_itoa_base(unsigned int n, const char *base)
 {
 	unsigned int	div;

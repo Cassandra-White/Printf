@@ -1,18 +1,15 @@
-
-
-
 #include "ft_printf.h"
 
-static char *add_preci(t_info *info, char *space_preci, char *str)
+static char	*add_preci(t_info *info, char *space_preci, char *str)
 {
-	int	i;
+	int		i;
 
 	i = ft_strlen(str);
-	if(str[0] == '0' && info->preci == 0)
+	if (str[0] == '0' && info->preci == 0)
 		str = "";
-	if(info->preci <= i)
+	if (info->preci <= i)
 		return (str);
-	if(!(space_preci = add_space(info->preci, '0')))
+	if (!(space_preci = add_space(info->preci, '0')))
 	{
 		return (0);
 	}
@@ -20,21 +17,21 @@ static char *add_preci(t_info *info, char *space_preci, char *str)
 	return (space_preci);
 }
 
-static char *add_width(t_info *info, char *space_width, char *str)
+static char	*add_width(t_info *info, char *space_width, char *str)
 {
-	int i;
+	int		i;
 
 	i = ft_strlen(str);
 	if (info->sign == '\0' && info->width < i)
 		return (str);
-	if (info->zero == ENABLE && 
+	if (info->zero == ENABLE &&
 		info->preci == DISABLE && info->right_space == DISABLE)
 		info->padding = '0';
-	if(info->width < i)
+	if (info->width < i)
 		info->width = i;
-	if(info->width ==i && info->sign)
+	if (info->width == i && info->sign)
 		info->width++;
-	if(!(space_width = add_space(info->width, info->padding)))
+	if (!(space_width = add_space(info->width, info->padding)))
 		return (0);
 	if (info->right_space == ENABLE && info->sign)
 		ft_strncpy(space_width + 1, str, i);
@@ -43,26 +40,24 @@ static char *add_width(t_info *info, char *space_width, char *str)
 	else
 		ft_strncpy(&space_width[info->width - i], str, i);
 	return (add_sign(info, space_width, i));
-
-	
-
 }
-int		ft_print_unsigned_int(va_list arg, t_info *info)
+
+int			ft_print_unsigned_int(va_list arg, t_info *info)
 {
-	t_space *space;
-	char *str;
+	char	*str;
+	t_space	*space;
+
 	space = start_space();
-	if(!(str = ft_uitoa((unsigned int)va_arg(arg, int))))
+	if (!(str = ft_uitoa((unsigned int)va_arg(arg, int))))
 		return (ERROR);
 	str = start_sign(info, str);
-	if(!(str = add_preci(info, space->preci, str))
+	if (!(str = add_preci(info, space->preci, str))
 	|| !(str = add_width(info, space->width, str)))
 	{
 		free_space(space);
-		return(ERROR);
+		return (ERROR);
 	}
-	info->nbyte += ft_putstr_n(str , ft_strlen(str));
+	info->nbyte += ft_putstr_n(str, ft_strlen(str));
 	free_space(space);
-	return(0);
+	return (0);
 }
-

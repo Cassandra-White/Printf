@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, int start, int len)
+char		*ft_substr(char const *s, int start, int len)
 {
-	int	i;
-	char	*str;
+	int			i;
+	char		*str;
 
 	i = 0;
 	if (!s || !(str = malloc(((len + 1) * sizeof(char)))))

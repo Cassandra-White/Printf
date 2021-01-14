@@ -1,9 +1,8 @@
-
 #include "libft.h"
 
-char	*ft_uitoa(unsigned int n)
+char		*ft_uitoa(unsigned int n)
 {
-	char		*str;
+	char			*str;
 	unsigned int	div;
 	unsigned int	i;
 
@@ -14,7 +13,7 @@ char	*ft_uitoa(unsigned int n)
 		div = div / 10;
 		i++;
 	}
-	if(!(str = malloc(sizeof(char) * (i + 1))))
+	if (!(str = malloc(sizeof(char) * (i + 1))))
 		return (0);
 	str[i] = '\0';
 	str[0] = '0';
@@ -23,9 +22,6 @@ char	*ft_uitoa(unsigned int n)
 		i--;
 		str[i] = (n % 10) + '0';
 		n = n / 10;
-
 	}
 	return (str);
-
-
 }

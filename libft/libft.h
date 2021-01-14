@@ -18,7 +18,7 @@
 # include <stddef.h>
 
 int					ft_putchar(char c);
-int				ft_strlen(const char *str);
+int					ft_strlen(const char *str);
 int					ft_atoi(const char *str);
 void				*ft_memset(void *str, int c, size_t n);
 void				ft_bzero(void *str, size_t n);
@@ -52,15 +52,13 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
-
-/*-------------------------------------------------------------*/
-int				ft_putstr_n(char *s, int n);
+int					ft_putstr_n(char *s, int n);
 char				*ft_uitoa(unsigned int n);
 char				*ft_itoa_base(unsigned int n, const char *base);
 char				*ft_lltoa_base(long long n, const char *base);
-int				use_in_set(char c, char *set);
+int					use_in_set(char c, char *set);
 char				*ft_strndup(const char *source, int size);
-int				ft_putstr(char *str);
+int					ft_putstr(char *str);
 char				*ft_strncpy(char *dest, char *src, unsigned int n);
-char 				*ft_strcpy(char *dest, char *src);
+char				*ft_strcpy(char *dest, char *src);
 #endif

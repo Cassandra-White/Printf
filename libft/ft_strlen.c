@@ -19,6 +19,5 @@ int	ft_strlen(const char *str)
 	i = 0;
 	while (str[i])
 		i++;
-//	ft_putstr("STRLEN");
 	return (i);
 }

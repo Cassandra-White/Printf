@@ -1,4 +1,3 @@
-
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
@@ -19,17 +18,16 @@
 # define ENABLE 1
 # define ZERO 0
 
-
-typedef struct	s_info
+typedef	struct	s_info
 {
-	int	nbyte;
+	int		nbyte;
 	int		right_space;
 	int		width;
 	int		preci;
 	int		zero;
 	char	padding;
 	char	sign;
-}			t_info;
+}				t_info;
 
 typedef struct	s_space
 {
@@ -37,22 +35,19 @@ typedef struct	s_space
 	char *width;
 }				t_space;
 
-int		ft_printf(const char *src, ...);
-
-int		ft_print_char(va_list arg, t_info *info);
-int		ft_print_string(va_list arg, t_info *info);
-int		ft_print_int(va_list arg, t_info *info);
-int		ft_print_unsigned_int(va_list arg, t_info *info);
-int		ft_print_hexa(va_list arg, t_info *info, char *base);
-int		ft_print_pointer(va_list arg, t_info *info);
-int		ft_print_percent(t_info *info);
-int		struct_complet(char **src,va_list arg, t_info *info);
-t_space		*start_space(void);
-char 		*add_space(int info_width, char info_padding);
-void		free_space(t_space *space);
-char		*start_sign(t_info *info, char *str);
-char		*add_sign(t_info *info, char *str, int i);
-
-
+int				ft_printf(const char *src, ...);
+int				ft_print_char(va_list arg, t_info *info);
+int				ft_print_string(va_list arg, t_info *info);
+int				ft_print_int(va_list arg, t_info *info);
+int				ft_print_unsigned_int(va_list arg, t_info *info);
+int				ft_print_hexa(va_list arg, t_info *info, char *base);
+int				ft_print_pointer(va_list arg, t_info *info);
+int				ft_print_percent(t_info *info);
+int				struct_complet(char **src, va_list arg, t_info *info);
+t_space			*start_space(void);
+char			*add_space(int info_width, char info_padding);
+void			free_space(t_space *space);
+char			*start_sign(t_info *info, char *str);
+char			*add_sign(t_info *info, char *str, int i);
 
 #endif

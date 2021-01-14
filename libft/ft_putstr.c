@@ -1,10 +1,9 @@
 #include "libft.h"
 
-int	ft_putstr(char *str)
+int		ft_putstr(char *str)
 {
-
 	int i;
-	
+
 	i = 0;
 	while (str[i])
 	{
@@ -13,4 +12,3 @@ int	ft_putstr(char *str)
 	}
 	return (i);
 }
-

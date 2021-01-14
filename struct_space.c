@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-t_space *start_space(void)
+t_space	*start_space(void)
 {
 	t_space *space;
 
@@ -10,23 +10,24 @@ t_space *start_space(void)
 	return (space);
 }
 
-char *add_space(int info_width, char info_padding)
+char	*add_space(int info_width, char info_padding)
 {
 	char *space;
-	if(!(space = malloc(sizeof(char) * (info_width + 1))))
+
+	if (!(space = malloc(sizeof(char) * (info_width + 1))))
 	{
 		return (0);
 	}
 	ft_memset(space, info_padding, info_width);
 	space[info_width] = '\0';
-	return (space);	
+	return (space);
 }
 
-void free_space(t_space *space)
+void	free_space(t_space *space)
 {
-	if(space->preci)
+	if (space->preci)
 		free(space->preci);
-	if(space->width)
+	if (space->width)
 		free(space->width);
 	free(space);
 }

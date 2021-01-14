@@ -1,4 +1,3 @@
-
 #include "libft.h"
 
 int	ft_putstr_n(char *s, int n)
@@ -12,5 +11,4 @@ int	ft_putstr_n(char *s, int n)
 		i++;
 	}
 	return (i);
-
 }
